@@ -89,7 +89,7 @@ export default function Home() {
                     <td className="px-4 py-2 border">
                       <Image
                         className="dark:invert"
-                        src="/fur-coat.svg"
+                        src="/coat.svg"
                         alt="Revolver"
                         width={50}
                         height={50}
