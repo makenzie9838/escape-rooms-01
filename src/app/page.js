@@ -1,6 +1,12 @@
+"use client"; 
 import Image from "next/image";
+import { useState } from 'react';
+import StoryGame from "@/components/storyGame.js";
 
 export default function Home() {
+  // Parent component contains the useState hook to manage the output state
+  // storyGame component receives setOutput as a prop
+  const [output, setOutput] = useState(''); // Not presetting intro message to keep game logic compartmentalized
 
   return (
     <div className="relative min-h-screen">
@@ -109,8 +115,10 @@ export default function Home() {
               id="storyOutput"
               className="bg-[url('/story-screen.png')] bg-cover bg-center bg-black text-white p-8 w-[640px] h-[384px] flex justify-center items-center mb-4 border-4 border-neutral-700 rounded-lg"
             >
-              Story Output
+              {output}
             </div>
+            {/* StoryGame handles subsequent game logic */}
+            <StoryGame setOutput={setOutput} />
 
             {/* Buttons */}
             <div className="flex space-x-4 items-center justify-items-center mt-4">
