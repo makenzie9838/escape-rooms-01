@@ -2,7 +2,27 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+First, download Docker and create an account: 
+
+https://www.docker.com/get-started/
+
+Second, install requirements from requirements.txt:
+
+pip install requirements.txt
+
+Third, set up Docker image of marqo, the end-to-end vector search engine, powering the in-game assistant: 
+
+docker rm -f marqo
+docker pull marqoai/marqo:latest
+docker run --name marqo -it -p 8882:8882 marqoai/marqo:latest
+
+MAKE SURE IT'S RUNNING ON DOCKER
+
+Fourth, run script of some kind to ensure all the in-game documents are loaded into marqo:
+
+???
+
+Finally, run the development server:
 
 ```bash
 npm run dev
