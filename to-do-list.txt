@@ -1,0 +1,3 @@
+1. Finish setting up chatbot
+2. Use Docker and Kubernetes for dependencies and etc. 
+3. Finish storyline
